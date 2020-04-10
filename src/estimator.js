@@ -10,6 +10,8 @@
 //   }
 // });
 function covid19ImpactEstimator(data) {
+  console.log(data);
+  console.log(data.reportedCases);
   const currentlyInfected1 = data.reportedCases * 10;
   const currentlyInfected2 = data.reportedCases * 50;
   const infectionsByRequestedTime1 = currentlyInfected1 * 7;
