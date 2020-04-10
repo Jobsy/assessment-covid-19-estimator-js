@@ -1,15 +1,19 @@
 const covid19ImpactEstimator = (data) => {
   //   console.log(data, 'testing');
   return {
-    data: data,
-    impact: {
-      currentlyInfested: data.data.reportedCases * 10,
-      infectionByRequestedTime: impact.currentlyInfested * 1024
-    },
-    severeImpact: {
-      currentlyInfested: data.data.reportedCases * 50,
-      infectionByRequestedTime: impact.currentlyInfested * 1024
-    }
+    //     data: data,
+    //     impact: {
+    //       currentlyInfested: data.data.reportedCases * 10,
+    //       infectionByRequestedTime: impact.currentlyInfested * 1024
+    //     },
+    //     severeImpact: {
+    //       currentlyInfested: data.data.reportedCases * 50,
+    //       infectionByRequestedTime: impact.currentlyInfested * 1024
+    //     }
+    //   };
+    data: {},
+    impact: {},
+    severeImpact: {}
   };
 };
 
