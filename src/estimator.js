@@ -1,15 +1,23 @@
 const covid19ImpactEstimator = (data) => ({
-      data: data,
-      impact: {
-        currentlyInfected: data.data.reportedCases * 10,
-        infectionsByRequestedTime: impact.currentlyInfested * 1024
-      },
-      severeImpact: {
-        currentlyInfested: data.data.reportedCases * 50,
-        infectionsByRequestedTime: impact.currentlyInfested * 1024
-      }
-    };
-  
+  //     data: data,
+  //     impact: {
+  //       currentlyInfested: data.data.reportedCases * 10,
+  //       infectionByRequestedTime: impact.currentlyInfested * 1024
+  //     },
+  //     severeImpact: {
+  //       currentlyInfested: data.data.reportedCases * 50,
+  //       infectionByRequestedTime: impact.currentlyInfested * 1024
+  //     }
+  //   };
+  data,
+  impact: {
+    currentlyInfected: data.data.reportedCases * 10
+    // infectionsByRequestedTime: impact.currentlyInfested * 1024
+  },
+  severeImpact: {
+    currentlyInfested: data.data.reportedCases * 50
+    // infectionsByRequestedTime: severeImpact.currentlyInfested * 1024
+  }
 });
 export default covid19ImpactEstimator;
 
