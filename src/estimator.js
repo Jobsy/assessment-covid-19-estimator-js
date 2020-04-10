@@ -38,7 +38,9 @@ function covid19ImpactEstimator(data) {
     severeImpact: {
       currentlyInfected: calSevImpCurrentlyInfected,
       infectionsByRequestedTime: calSevImpInfectionsByRequestedTime
-    }
+    },
+    debugger1: console.log(data),
+    debugger2: console.log(data.reportedCases)
   };
 }
 export default covid19ImpactEstimator;
