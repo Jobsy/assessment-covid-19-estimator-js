@@ -17,8 +17,8 @@ function covid19ImpactEstimator(data) {
 
   const impCurrentlyInfected = data.reportedCases * 10;
   const sevImpCurrentlyInfected = data.reportedCases * 50;
-  const impInfectionsByRequestedTime = impCurrentlyInfected;
-  const sevImpInfectionsByRequestedTime = sevImpCurrentlyInfected;
+  const impInfectionsByRequestedTime = impCurrentlyInfected * 3;
+  const sevImpInfectionsByRequestedTime = sevImpCurrentlyInfected * 3;
 
   if (data.periodType === 'days') {
     calImpCurrentlyInfected = impCurrentlyInfected;
