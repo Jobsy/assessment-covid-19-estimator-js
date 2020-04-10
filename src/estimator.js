@@ -13,12 +13,12 @@ function covid19ImpactEstimator(data) {
   return {
     data,
     impact: {
-      currentlyInfected: data.data.reportedCases * 10,
-      infectionsByRequestedTime: data.data.reportedCases * 10 * 1024
+      currentlyInfected: data.reportedCases * 10
+      //   infectionsByRequestedTime: data.reportedCases * 10 * 1024
     },
     severeImpact: {
-      currentlyInfected: data.reportedCases * 50,
-      infectionsByRequestedTime: data.reportedCases * 10 * 1024
+      currentlyInfected: data.reportedCases * 50
+      //   infectionsByRequestedTime: data.reportedCases * 10 * 1024
     }
   };
 }
