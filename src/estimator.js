@@ -10,8 +10,6 @@
 //   }
 // });
 function covid19ImpactEstimator(data) {
-  console.log(data);
-  console.log(data.reportedCases);
   let calImpCurrentlyInfected;
   let calSevImpCurrentlyInfected;
   let calImpInfectionsByRequestedTime;
