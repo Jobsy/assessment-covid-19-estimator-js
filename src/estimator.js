@@ -1,14 +1,27 @@
-const covid19ImpactEstimator = (data) => ({
-  data: { data },
-  impact: {
-    currentlyInfected: data.reportedCases * 10,
-    infectionsByRequestedTime: data.reportedCases * 10 * 1024
-  },
-  severeImpact: {
-    currentlyInfested: data.reportedCases * 50,
-    infectionsByRequestedTime: data.reportedCases * 10 * 1024
-  }
-});
+// const covid19ImpactEstimator = (data) => ({
+//   data,
+//   impact: {
+//     currentlyInfected: data.reportedCases * 10,
+//     infectionsByRequestedTime: data.reportedCases * 10 * 1024
+//   },
+//   severeImpact: {
+//     currentlyInfested: data.reportedCases * 50,
+//     infectionsByRequestedTime: data.reportedCases * 10 * 1024
+//   }
+// });
+function covid19ImpactEstimator(data) {
+  return {
+    data,
+    impact: {
+      currentlyInfected: data.reportedCases * 10,
+      infectionsByRequestedTime: data.reportedCases * 10 * 1024
+    },
+    severeImpact: {
+      currentlyInfested: data.reportedCases * 50,
+      infectionsByRequestedTime: data.reportedCases * 10 * 1024
+    }
+  };
+}
 export default covid19ImpactEstimator;
 
 // {
