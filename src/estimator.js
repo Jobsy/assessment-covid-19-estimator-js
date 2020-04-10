@@ -10,14 +10,17 @@
 //   }
 // });
 function covid19ImpactEstimator(data) {
+  let currentlyInfected1 = data.reportedCases * 10;
+  let currentlyInfected2 = data.reportedCases * 50;
+
   return {
     data,
     impact: {
-      currentlyInfected: data.reportedCases * 10
+      currentlyInfected: currentlyInfected1
       //   infectionsByRequestedTime: data.reportedCases * 10 * 1024
     },
     severeImpact: {
-      currentlyInfected: data.reportedCases * 50
+      currentlyInfected: currentlyInfected2
       //   infectionsByRequestedTime: data.reportedCases * 10 * 1024
     }
   };
