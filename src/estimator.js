@@ -17,8 +17,8 @@ function covid19ImpactEstimator(data) {
 
   const impCurrentlyInfected = data.reportedCases * 10;
   const sevImpCurrentlyInfected = data.reportedCases * 50;
-  const impInfectionsByRequestedTime = impCurrentlyInfected * 512;
-  const sevImpInfectionsByRequestedTime = sevImpCurrentlyInfected * 512;
+  const impInfectionsByRequestedTime = impCurrentlyInfected;
+  const sevImpInfectionsByRequestedTime = sevImpCurrentlyInfected;
 
   if (data.periodType === 'days') {
     calImpCurrentlyInfected = impCurrentlyInfected;
@@ -42,15 +42,19 @@ function covid19ImpactEstimator(data) {
   return {
     data,
     impact: {
-      currentlyInfected: calImpCurrentlyInfected,
-      infectionsByRequestedTime: calImpInfectionsByRequestedTime
+      currentlyInfected: calImpCurrentlyInfected
+      // infectionsByRequestedTime: calImpInfectionsByRequestedTime
     },
     severeImpact: {
-      currentlyInfected: calSevImpCurrentlyInfected,
-      infectionsByRequestedTime: calSevImpInfectionsByRequestedTime
+      currentlyInfected: calSevImpCurrentlyInfected
+      // infectionsByRequestedTime: calSevImpInfectionsByRequestedTime
     },
     debugger1: console.log(data),
-    debugger2: console.log(data.reportedCases)
+    debugger2: console.log(data.reportedCases),
+    debugger3: console.log(calImpCurrentlyInfected),
+    debugger4: console.log(calImpInfectionsByRequestedTime),
+    debugger5: console.log(calSevImpCurrentlyInfected),
+    debugger6: console.log(calSevImpInfectionsByRequestedTime)
   };
 }
 export default covid19ImpactEstimator;
