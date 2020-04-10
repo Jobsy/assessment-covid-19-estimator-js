@@ -23,10 +23,22 @@ function covid19ImpactEstimator(data) {
   const sevImpInfectionsByRequestedTime = sevImpCurrentlyInfected * 512;
 
   if (data.periodType === 'days') {
+    calImpCurrentlyInfected = impCurrentlyInfected;
+    calSevImpCurrentlyInfected = sevImpCurrentlyInfected;
+    calImpInfectionsByRequestedTime = impInfectionsByRequestedTime;
+    calSevImpInfectionsByRequestedTime = sevImpInfectionsByRequestedTime;
+  }
+  if (data.periodType === 'weeks') {
     calImpCurrentlyInfected = impCurrentlyInfected * 7;
     calSevImpCurrentlyInfected = sevImpCurrentlyInfected * 7;
     calImpInfectionsByRequestedTime = impInfectionsByRequestedTime * 7;
     calSevImpInfectionsByRequestedTime = sevImpInfectionsByRequestedTime * 7;
+  }
+  if (data.periodType === 'months') {
+    calImpCurrentlyInfected = impCurrentlyInfected * 30;
+    calSevImpCurrentlyInfected = sevImpCurrentlyInfected * 30;
+    calImpInfectionsByRequestedTime = impInfectionsByRequestedTime * 30;
+    calSevImpInfectionsByRequestedTime = sevImpInfectionsByRequestedTime * 30;
   }
 
   return {
