@@ -9,7 +9,7 @@ const covid19ImpactEstimator = (data) => ({
   //       infectionByRequestedTime: impact.currentlyInfested * 1024
   //     }
   //   };
-  data: {},
+  data,
   impact: {},
   severeImpact: {}
 });
