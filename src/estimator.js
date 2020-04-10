@@ -42,12 +42,12 @@ function covid19ImpactEstimator(data) {
   return {
     data,
     impact: {
-      currentlyInfected: calImpCurrentlyInfected
-      // infectionsByRequestedTime: calImpInfectionsByRequestedTime
+      currentlyInfected: calImpCurrentlyInfected,
+      infectionsByRequestedTime: calImpInfectionsByRequestedTime
     },
     severeImpact: {
-      currentlyInfected: calSevImpCurrentlyInfected
-      // infectionsByRequestedTime: calSevImpInfectionsByRequestedTime
+      currentlyInfected: calSevImpCurrentlyInfected,
+      infectionsByRequestedTime: calSevImpInfectionsByRequestedTime
     },
     debugger1: console.log(data),
     debugger2: console.log(data.reportedCases),
