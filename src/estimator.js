@@ -12,18 +12,19 @@ const covid19ImpactEstimator = (data) => {
     }
     return days;
   }
-
+  const days = getDays();
   return {
     data,
     impact: {
       currentlyInfected: data.reportedCases * 10,
-      infectionsByRequestedTime: data.reportedCases * 10 * 2 ** getDays()
+      infectionsByRequestedTime: data.reportedCases * 10 * 2 ** days
     },
     sevImpact: {
       currentlyInfected: data.reportedCases * 50,
-      infectionsByRequestedTime: data.reportedCases * 50 * 2 ** getDays()
+      infectionsByRequestedTime: data.reportedCases * 50 * 2 ** days
     },
-    debugger1: console.log(getDays())
+    debugger1: console.log(getDays()),
+    debugger2: console.log(days)
   };
 };
 // function covid19ImpactEstimator(data) {
