@@ -20,3 +20,4 @@ module.exports = {
     'operator-linebreak': 'off'
   }
 };
+// check challenge 1 / estimator.js
