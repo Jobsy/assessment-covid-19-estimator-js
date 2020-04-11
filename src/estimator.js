@@ -2,11 +2,11 @@ const covid19ImpactEstimator = (data) => ({
   data,
   impact: {
     currentlyInfected: data.reportedCases * 10,
-    infectionsByRequestedTime: data.reportedCases * 10 * 1024
+    infectionsByRequestedTime: data.reportedCases * 10 * 2 ** data.timeToElapse
   },
   sevImpact: {
     currentlyInfected: data.reportedCases * 50,
-    infectionsByRequestedTime: data.reportedCases * 10 * 1024
+    infectionsByRequestedTime: data.reportedCases * 50 * 2 ** data.timeToElapse
   }
 });
 // function covid19ImpactEstimator(data) {
