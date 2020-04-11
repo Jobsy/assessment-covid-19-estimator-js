@@ -1,18 +1,18 @@
 const covid19ImpactEstimator = (data) => {
-  // function getDays() {
-  let days;
-  if (data.periodType === 'days') {
-    days = Math.trunc(data.timeToElapse / 3);
+  function getDays() {
+    let days;
+    if (data.periodType === 'days') {
+      Math.trunc(data.timeToElapse / 3);
+    }
+    if (data.periodType === 'weeks') {
+      Math.trunc((data.timeToElapse * 7) / 3);
+    }
+    if (data.periodType === 'months') {
+      Math.trunc((data.timeToElapse * 30) / 3);
+    }
+    return days;
   }
-  if (data.periodType === 'weeks') {
-    days = Math.trunc((data.timeToElapse * 7) / 3);
-  }
-  if (data.periodType === 'months') {
-    days = Math.trunc((data.timeToElapse * 30) / 3);
-  }
-  // return days;
-  // }
-  // const days = getDays();
+  const days = getDays();
   return {
     data,
     impact: {
