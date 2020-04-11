@@ -1,14 +1,30 @@
-const covid19ImpactEstimator = (data) => ({
-  data,
-  impact: {
-    currentlyInfected: data.reportedCases * 10,
-    infectionsByRequestedTime: data.reportedCases * 10 * 2 ** data.timeToElapse
-  },
-  sevImpact: {
-    currentlyInfected: data.reportedCases * 50,
-    infectionsByRequestedTime: data.reportedCases * 50 * 2 ** data.timeToElapse
+const covid19ImpactEstimator = (data) => {
+  function getDays() {
+    let days;
+    if (data.periodType === 'days') {
+      days = data.timeToElapse / 3;
+    }
+    if (data.periodType === 'weeks') {
+      days = (data.timeToElapse * 7) / 3;
+    }
+    if (data.periodType === 'months') {
+      days = (data.timeToElapse * 30) / 3;
+    }
+    return days;
   }
-});
+
+  return {
+    data,
+    impact: {
+      currentlyInfected: data.reportedCases * 10,
+      infectionsByRequestedTime: data.reportedCases * 10 * 2 ** getDays()
+    },
+    sevImpact: {
+      currentlyInfected: data.reportedCases * 50,
+      infectionsByRequestedTime: data.reportedCases * 50 * 2 ** getDays()
+    }
+  };
+};
 // function covid19ImpactEstimator(data) {
 //   let calImpCurrentlyInfected;
 //   let calSevImpCurrentlyInfected;
