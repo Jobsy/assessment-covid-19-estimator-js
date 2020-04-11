@@ -23,7 +23,7 @@ const covid19ImpactEstimator = (data) => {
       currentlyInfected: data.reportedCases * 50,
       infectionsByRequestedTime: data.reportedCases * 50 * 2 ** days
     },
-    // debugger1: console.log(getDays()),
+    debugger1: console.log(getDays()),
     debugger2: console.log(days)
   };
 };
