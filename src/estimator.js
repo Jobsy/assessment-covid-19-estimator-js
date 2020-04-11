@@ -2,13 +2,13 @@ const covid19ImpactEstimator = (data) => {
   function getDays() {
     let days;
     if (data.periodType === 'days') {
-      Math.trunc(data.timeToElapse / 3);
+      days = Math.trunc(data.timeToElapse / 3);
     }
     if (data.periodType === 'weeks') {
-      Math.trunc((data.timeToElapse * 7) / 3);
+      days = Math.trunc((data.timeToElapse * 7) / 3);
     }
     if (data.periodType === 'months') {
-      Math.trunc((data.timeToElapse * 30) / 3);
+      days = Math.trunc((data.timeToElapse * 30) / 3);
     }
     return days;
   }
